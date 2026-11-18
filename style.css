@@ -1,0 +1,167 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#logo-cabeçalho{
+width: 150px;
+margin-top: -40px;
+}
+header{
+background-color: #e7d6c5 ; /**/
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+}
+.cabeçalho{display: flex;
+color: #5a0c1f; /*Cor do texto*/
+font-family: Arial, Helvetica, sans-serif; /*Fonte das ancoras*/
+font-size: 15px; /*Tamanho da fonte*/
+text-decoration: none; /*Tirar o texto sublinhado*/
+padding: 15px; /*separar os textos*/
+}
+#nave{
+    display: flex; /*Ativar o display flex*/
+    flex-direction: row; /*Centralizar o texto em vertical*/
+    /*justify-content: center;*/
+}
+#nave a{
+    padding-top: 40px; /*Conseguir abaixar o texto*/
+}
+.fotos-fundos{
+display: flex; /*Ativa o Display-flex*/
+width: 100px; /*largura da imagem*/
+height: 105.3vh; /*altura da imagem*/
+}
+.imagem-body{  
+position: relative; /*Permitir que de para colocar outros elementos em cima da imagem */
+width: 100%; /*Largura da imagem*/
+overflow: hidden; /*cortar e esconder qualquer pedaço de conteúdo que ultrapasse os limites de uma caixa*/
+}
+.imagem-body::after{
+    content: ""; /*Cria o elemento after*/
+    position: absolute; /**Permitir que de para colocar outros elementos em cima da imagem */
+    top: 0; /*Cola o elemento exatamente na borda superior*/
+    left: 0; /*Cola o elemento exatamente na borda esquerda */
+    width: 100%; /*Largura da imagem*/
+    height: 100%; /*Altura da imagem*/
+    background-color: rgba(0, 0, 0, 0.45); /* Preto com 45% de transparência */
+    z-index: 1; /*Faz ele ficar na frente do elemento*/
+
+}
+
+
+.onda-vinho{
+  position: relative; /*Permitir que de para colocar a onda em cima da onda */ 
+  bottom: 1px; /*Faz a onda subir*/
+  left: 0; /*Cola o elemento exatamente na borda esquerda */
+  width: 100%; /*Largura da onda*/
+  line-height: 0; /*Zera a altura da linha invisível de texto ao redor do elemento. */
+  z-index: 1000;  /*Faz ele ficar na frente do elemento*/
+}
+.texto-sobre {
+    position: absolute; /*Coloca o texto sobre as imagens*/
+    top: 50%; /*Empurra da esquerda para o meio*/
+    left: 50%; /*Empurra da direita para o meio*/
+    transform: translate(-50%, -50%); /* Puxa o centro exato da caixa para o meio */
+    z-index: 10; /* Garante que fique na frente das fotos */
+    text-align: center; /*Centralizar o texto*/
+}
+.texto-sobre p{
+background-color: #e7d6c5;
+color: #5a0c1f;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+border: 30px;
+border-radius: 15px;
+width: 200px;
+height: 20px;
+}
+.texto-sobre h2{
+ font-size: 45px;   
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: white;
+margin-left: -20px;
+}
+.texto-sobre:hover{
+transform:
+
+}
+
+.sobre-imagem{
+margin-top: 20px;
+}
+.sobre-nos {
+    position: relative;
+    background: #f5eee4;
+    padding: 120px 8%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    position: relative;
+    z-index: 2;}
+/* TEXTO */
+
+.sobre-conteudo {
+    width: 48%;
+}
+
+.sobre-subtitulo {
+    color: #8b5260;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.sobre-conteudo h2 {
+    color: #59402f;
+    font-family: Georgia, serif;
+    font-size: 43px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.sobre-conteudo h2 em {
+    color: #702d40;
+    display: block;
+}
+
+.sobre-detalhe {
+    width: 65px;
+    height: 2px;
+    background: #702d40;
+    margin: 25px 0;
+}
+
+.sobre-conteudo p {
+    color: #6b5b50;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* BOTÃO */
+
+.sobre-botao {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 15px;
+    background: #702d40;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sobre-botao:hover {
+    background: #59402f;
+    transform: translateY(-3px);
+}
