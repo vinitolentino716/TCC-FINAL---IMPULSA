@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
     margin: 0%;
     padding: 0%;
@@ -52,14 +57,13 @@ overflow: hidden; /*cortar e esconder qualquer pedaço de conteúdo que ultrapas
 
 }
 
-
 .onda-vinho{
   position: relative; /*Permitir que de para colocar a onda em cima da onda */ 
   bottom: 1px; /*Faz a onda subir*/
   left: 0; /*Cola o elemento exatamente na borda esquerda */
   width: 100%; /*Largura da onda*/
   line-height: 0; /*Zera a altura da linha invisível de texto ao redor do elemento. */
-  z-index: 1000;  /*Faz ele ficar na frente do elemento*/
+  z-index: 1;  /*Faz ele ficar na frente do elemento*/
 }
 .texto-sobre {
     position: absolute; /*Coloca o texto sobre as imagens*/
@@ -68,6 +72,10 @@ overflow: hidden; /*cortar e esconder qualquer pedaço de conteúdo que ultrapas
     transform: translate(-50%, -50%); /* Puxa o centro exato da caixa para o meio */
     z-index: 10; /* Garante que fique na frente das fotos */
     text-align: center; /*Centralizar o texto*/
+    transition: transform 0.6s ease;;
+}
+.texto-sobre:hover{
+transform: translateY(-50%, -50%) translateY(-15px);
 }
 .texto-sobre p{
 background-color: #e7d6c5;
@@ -84,10 +92,8 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 color: white;
 margin-left: -20px;
 }
-.texto-sobre:hover{
-transform:
 
-}
+
 
 .sobre-imagem{
 margin-top: 20px;
@@ -107,7 +113,8 @@ margin-top: 20px;
     align-items: center;
     gap: 65px;
     position: relative;
-    z-index: 2;}
+    z-index: 2;
+}
 /* TEXTO */
 
 .sobre-conteudo {
@@ -164,4 +171,434 @@ margin-top: 20px;
 .sobre-botao:hover {
     background: #59402f;
     transform: translateY(-3px);
+}
+#h2-serviços-um{
+text-align: center;
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+font-size: 35px;
+color: #b8002e;
+margin-top: 90px;
+}
+#h2-serviços-dois{
+text-align: center;
+font-family: 'Bricolage Grotesque', sans-serif;
+font-size: 42px;
+font-weight: 700;
+color:#A61936;
+}
+#foto-um-serv{
+width: 300px;
+margin-top: 50px;
+border-radius: 20px;
+background-color: rgba(0, 0, 0, 0.45); /* Preto com 45% de transparência */
+}
+#foto-dois-serv{
+width: 300px;
+height: 300px;
+margin-top: 50px;
+border-radius: 20px;
+}
+#foto-tres-serv{
+width: 300px;
+height: 300px;
+margin-top: 50px;
+border-radius: 20px;
+}
+.fotos-servi{
+display: flex;
+flex-direction: row;
+gap: 50px;
+margin-left: 150px;
+}
+#serv-1{
+color:#5a0c1f;
+font-size: 25px;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 15px;
+margin-left: 150px;
+}
+#serv-2{
+color:#5a0c1f;
+font-size: 25px;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: -30px;
+margin-left: 580px;   
+}
+#serv-3{
+color:#5a0c1f;
+font-size: 25px;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: -30px;
+margin-left: 950px;   
+}
+.divisor-bolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    max-width: 1500px;
+    margin: 60px auto;
+    background-color:  #70142E ;
+    color: white;
+    margin-top: 70px;
+    
+}
+.divisor-bolo .linha {
+    flex: 1;
+    height: 1px;
+    background-color: white;
+    
+}
+.divisor-bolo svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 1.5;
+    flex-shrink: 0;
+    margin-left: 355px;
+}
+#cursos{
+font-family: 'Cormorant Garamond', serif;
+font-size: 42px;
+font-style: italic;
+text-align: center;
+}
+#paragraf-curso{
+font-family: 'Poppins', sans-serif;
+font-size: 18px;
+}
+.divisor-bolo > .linha:first-child {
+    margin-right: -320px;
+}
+
+.divisor-bolo > .linha:last-child {
+    margin-left: -320px;
+}
+.section-conteudo-cursos{
+background-color: #e7d6c5;
+}
+.section-conteudo-cursos{
+    background-color: #e7d6c5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin-top: -60px;
+}
+.card-curso {
+    width: 305px;
+    background-color: #FFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    margin-left: 20px;
+
+}
+.informacoes-curso {
+    padding: 20px;
+    text-align: center;
+}
+
+.title-cursos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.title-cursos svg {
+    width: 35px;
+    height: 35px;
+    color: #790F32;
+    flex-shrink: 0;
+}
+
+.title-cursos h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    color: #790F32;
+    text-align: left;
+    border-left: 1px solid #790F32;
+    padding-left: 15px;
+    margin: 0;
+    border-left: none;
+    position: relative;
+}
+.title-cursos h3::before{
+content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 25px;
+    background-color: #790F32;
+}
+#aprend-curs{
+font-family: 'Poppins', sans-serif;
+font-size: 13px;
+margin-left: 5px;
+text-align: center;
+}
+.botao-card {
+    display: inline-block;
+    padding: 8px 30px;
+    border: 1px solid #790F32;
+    border-radius: 25px;
+    color: #790F32;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 70px;
+    transition: 0.3s ease;
+}
+.botao-card:hover {
+    background-color: #790F32;
+    color: white;
+}
+.card-curse {
+    width: 300px;
+    height: 290px;
+    background-color: #FFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  
+}
+.card-curse img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.informações-curse{
+padding: 20px;
+text-align: center;
+}
+.titulo-curso{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -20px;
+}
+.titulo-curso svg{
+    width: 35px;
+    height: 35px;
+    color: #790F32;
+    flex-shrink: 0;
+}
+.titulo-curso h3{
+    
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    color: #790F32;
+    text-align: left;
+    border-left: 1px solid #790F32;
+    padding-left: 15px;
+    margin: 0;
+    border-left: none;
+    position: relative;
+}
+
+.titulo-curso h3::before{
+content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 25px;
+    background-color: #790F32;
+}
+#paragraf-curse{
+font-family: 'Poppins', sans-serif;
+font-size: 13px;
+margin-left: 5px;
+text-align: center;
+}
+.botão-card-2{
+ display: inline-block;
+    padding: 8px 30px;
+    border: 1px solid #790F32;
+    border-radius: 25px;
+    color: #790F32;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 1px;
+    transition: 0.3s ease;
+    }
+.botão-card-2:hover{
+  background-color: #790F32;
+    color: white; 
+}
+.box-curso{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+.box-curso img{
+  width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.informacoes-box{
+padding: 20px;
+text-align: center;
+}
+.titulo-box{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: -20px;
+}
+.titulo-box svg{
+    width: 35px;
+    height: 35px;
+    color: #790F32;
+    flex-shrink: 0;
+}
+.titulo-box h3{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    color: #790F32;
+    text-align: left;
+    border-left: 1px solid #790F32;
+    padding-left: 15px;
+    margin: 0;
+    border-left: none;
+    position: relative;
+}
+.titulo-box h3::before{
+content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 25px;
+    background-color: #790F32;
+}
+#paragraf-box{
+
+font-family: 'Poppins', sans-serif;
+font-size: 13px;
+margin-left: 5px;
+text-align: center; 
+}
+.botão-card3{
+ display: inline-block;
+    padding: 8px 30px;
+    border: 1px solid #790F32;
+    border-radius: 25px;
+    color: #790F32;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 1px;
+    transition: 0.3s ease;
+}
+.botão-card3:hover{
+
+  background-color: #790F32;
+    color: white; 
+}
+.retangulo-inscricao{
+background-color: #790F32;; 
+border-radius: 20px; 
+width: 1200px;
+height: 300px;
+}
+#foto-sabrina{
+width: 300px;
+margin-left: 70px;
+margin-top: 20px;
+}
+.content-serv{
+margin-left: 450px;
+margin-top: -230px;
+}
+.content-serv h2{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 25px;
+color: white;
+}
+.content-serv li{
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 15px;
+color: white;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+.content-serv li::before{
+content: "✓";
+    color: #F3E7DF;
+    font-weight: bold;
+    margin-right: 10px;
+
+}
+.content-serv ul{
+ list-style: none;
+    padding: 0;
+}
+.preco-curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-left: 1px solid #F3E7DF;
+    padding-left: 30px;
+    margin-top: -200px;
+    margin-left: 850px;
+}
+
+.texto-preco {
+    background-color: #F3E7DF;
+    color: #790F32;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.preco-curso h2 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    color: #F3E7DF;
+    font-weight: 700;
+    font-variant-numeric: lining-nums;
+   
+}
+
+.botao-inscricao {
+    background-color: #F3E7DF;
+    color: #790F32;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
 }
