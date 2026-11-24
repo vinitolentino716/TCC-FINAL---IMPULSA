@@ -7,6 +7,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+
 }
 #logo-cabeçalho{
 width: 150px;
@@ -34,6 +35,12 @@ padding: 15px; /*separar os textos*/
 }
 #nave a{
     padding-top: 40px; /*Conseguir abaixar o texto*/
+}
+html {
+    scroll-behavior: smooth;
+}
+#Sobrenos {
+    scroll-margin-top: 100px;
 }
 .fotos-fundos{
 display: flex; /*Ativa o Display-flex*/
@@ -172,7 +179,7 @@ margin-top: 20px;
     background: #59402f;
     transform: translateY(-3px);
 }
-#h2-serviços-um{
+.h2-serv-um{
 text-align: center;
 font-family: 'Cormorant Garamond', serif;
 font-style: italic;
@@ -290,6 +297,7 @@ background-color: #e7d6c5;
 }
 .card-curso {
     width: 305px;
+    height: 290px;
     background-color: #FFFF;
     border-radius: 20px;
     overflow: hidden;
@@ -323,7 +331,7 @@ background-color: #e7d6c5;
     text-align: left;
     border-left: 1px solid #790F32;
     padding-left: 15px;
-    margin: 0;
+    margin: 10px;
     border-left: none;
     position: relative;
 }
@@ -402,7 +410,7 @@ text-align: center;
     text-align: left;
     border-left: 1px solid #790F32;
     padding-left: 15px;
-    margin: 0;
+    margin: 10px;
     border-left: none;
     position: relative;
 }
@@ -480,7 +488,7 @@ text-align: center;
     text-align: left;
     border-left: 1px solid #790F32;
     padding-left: 15px;
-    margin: 0;
+    margin: 10px;
     border-left: none;
     position: relative;
 }
@@ -601,4 +609,152 @@ content: "✓";
     font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
+}
+
+.section-contatos {
+    background-color: #F5E8DC;
+    scroll-margin-top: 60px;
+}
+
+.cabecalho-contatos {
+    background-color: #70142E;
+    color: white;
+    text-align: center;
+
+    padding: 35px 20px 65px;
+
+    border-radius: 0 0 50% 50% / 0 0 35% 35%;
+}
+
+.cabecalho-contatos h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.decoracao-contatos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 12px;
+}
+
+.linha-contato {
+    width: 75px;
+    height: 1px;
+    background-color: #F3E7DF;
+}
+
+.decoracao-contatos svg {
+    width: 25px;
+    height: 25px;
+    color: #F3E7DF;
+}
+
+.cabecalho-contatos p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 450px;
+    margin: 0 auto;
+}
+#foto-contato{
+width: 300px;
+border-radius: 25px;
+margin-left: 40px;
+margin-top: 60px;
+object-fit: cover;
+}
+.container-contatos{
+ display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.texto-contatos h3 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #70142E;
+    margin-bottom: 15px;
+    margin-top: -50px;
+}
+
+.texto-contatos p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
+.linha-contatos {
+    width: 2px;
+    height: 350px;
+    background-color: #8B1538;  
+}
+.card-instagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 520px;
+    padding: 20px;
+
+    background-color: #FFF7F0;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.card-instagram svg {
+    width: 45px;
+    height: 45px;
+    color: #8B1538;
+    flex-shrink: 0;
+}
+
+.texto-instagram {
+    border-left: 1px solid #8B1538;
+    padding-left: 18px;
+    flex: 1;
+}
+
+.texto-instagram h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 22px;
+    color: #8B1538;
+}
+
+.texto-instagram p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #35292C;
+}
+
+.botao-instagram {
+    background-color: #8B1538;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.cards-contatos{
+ display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.email-contato {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #8B1538;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.email-contato:hover {
+    text-decoration: underline;
 }
