@@ -26,7 +26,7 @@ width: 100%;
 z-index: 1000;
 }
 #foto-pagini{
-display: flex;
+width: 19000px;
 }
 .cabeçalho{display: flex;
 color: #5a0c1f; /*Cor do texto*/
@@ -57,7 +57,21 @@ height: 105.3vh; /*altura da imagem*/
 .imagem-body{  
 position: relative; /*Permitir que de para colocar outros elementos em cima da imagem */
 width: 100%; /*Largura da imagem*/
+height: 500px;
 overflow: hidden; /*cortar e esconder qualquer pedaço de conteúdo que ultrapasse os limites de uma caixa*/
+}
+.fotos-fundos{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+#foto-pagini {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 .imagem-body::after{
     content: ""; /*Cria o elemento after*/
@@ -186,6 +200,7 @@ margin-top: 20px;
     background: #59402f;
     transform: translateY(-3px);
 }
+
 .h2-serv-um{
 text-align: center;
 font-family: 'Cormorant Garamond', serif;
@@ -201,63 +216,50 @@ font-size: 42px;
 font-weight: 700;
 color:#A61936;
 }
-#foto-um-serv{
-width: 300px;
-margin-top: 50px;
-border-radius: 20px;
-background-color: rgba(0, 0, 0, 0.45); /* Preto com 45% de transparência */
-transition: 0.5s;
+
+
+
+
+.fotos-servi {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 0 20px;
 }
-#foto-um-serv:hover{
-transform: translateY(-15px);
+
+
+
+.fotos-servi .servico-item {
+    width: 300px;
+    flex: 0 0 300px;
+    text-align: center;
+    margin: 0;
 }
-#foto-dois-serv{
-width: 300px;
-height: 300px;
-margin-top: 50px;
-border-radius: 20px;
-transition: 0.5s;
+
+
+
+.fotos-servi img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 !important;
+    transition: 0.5s;
 }
-#foto-dois-serv:hover{
-transform: translateY(-15px);
+.fotos-servi img:hover{
+  transform: translateY(-15px);
 }
-#foto-tres-serv{
-width: 300px;
-height: 300px;
-margin-top: 50px;
-border-radius: 20px;
-transition: 0.5s;
+
+.fotos-servi h2 {
+    text-align: center;
+    margin: 15px 0 0 !important;
+    font-size: 23px;
 }
-#foto-tres-serv:hover{
-transform: translateY(-15px);   
-}
-.fotos-servi{
-display: flex;
-flex-direction: row;
-gap: 50px;
-margin-left: 250px;
-}
-#serv-1{
-color:#5a0c1f;
-font-size: 25px;
-font-family: Arial, Helvetica, sans-serif;
-margin-top: 15px;
-margin-left: 290px;
-}
-#serv-2{
-color:#5a0c1f;
-font-size: 25px;
-font-family: Arial, Helvetica, sans-serif;
-margin-top: -30px;
-margin-left: 670px;   
-}
-#serv-3{
-color:#5a0c1f;
-font-size: 25px;
-font-family: Arial, Helvetica, sans-serif;
-margin-top: -30px;  
-margin-left: 1040px; 
-}
+
+
 .divisor-bolo {
     display: flex;
     align-items: center;
@@ -691,30 +693,37 @@ content: "✓";
     margin: 0 auto;
 }
 #foto-contato{
-width: 400px;
+width: 600px;
+height: 300px;
 border-radius: 25px;
-margin-left: 40px;
-margin-top: 60px;
+margin-left: 50px;
+margin-top: -200px;
 object-fit: cover;
 }
 .container-contatos{
  display: flex;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 250px;
+    gap: 20px;
 }
-.texto-contatos h3 {
-    font-family: Georgia, serif;
+.cards-contatos {
+    transform: translate(70px, -790px);              /*CAAAARD INSTAGRAAAAAM*/
+}
+#h3-contatos{
+   font-family: Georgia, serif;
     font-size: 35px;
+     white-space: nowrap;
     color: #70142E;
     margin-bottom: 15px;
-    margin-top: -50px;
+    margin-top: 600px;
 }
-
 .texto-contatos p {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: black;
+    white-space: nowrap;
 }
 .linha-contatos {
     width: 2px;
@@ -728,10 +737,10 @@ object-fit: cover;
     gap: 20px;
     width: 520px;
     padding: 20px;
-    background-color: #FFF7F0;
+    background-color:  #FFF7F0;
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
-    margin-top: -10px;
+    margin-top: 5px;
 }
 
 .card-instagram svg {
@@ -771,11 +780,7 @@ object-fit: cover;
     font-weight: 600;
     white-space: nowrap;
 }
-.cards-contatos{
- display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+
 .email-contato {
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
@@ -789,13 +794,15 @@ object-fit: cover;
 }
 .footer{
 background-color: #70142E;
-margin-top: 50px;
+margin-top: -1150px;
 }
 #paragraf-footer{
 font-family: Arial, Helvetica, sans-serif;
 font-size: 25px;
 text-align: center;
 color: white;
+padding: 10px;
+margin: 10px;
 }
 #paragrafo-footer{
 font-family: Arial, Helvetica, sans-serif;
@@ -822,64 +829,976 @@ color: white;
     text-align: center;
     color: white;
 }
-.cont-whats{
+.layout-contatos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 40px;
+}
+.whats-cont{
+ width: 520px;
+    max-width: 100%;
+    background-color:  #FFF7F0;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 820px;
+    margin-top: -60px  ;
+}
+.cont-whats {
+    transform: translateY(-1220px);
+}
+
+
+.novo-texto-contatos {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#h3-contatos {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #70142E;
+    margin-bottom: 12px;
+}
+
+.novo-texto-contatos p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #35292C;
+    line-height: 1.6;
+}
+.novo-texto-contatos {
+    transform: translate(-420px, -780px);    /*OSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSIIIII*/
+}
+.whats-cont svg{
+width: 45px;
+height: 45px;
+color: #8B1538;
+align-self: center;
+}
+.titulo-whats{
+text-align: center;
+}
+.titulo-whats h3{
+ font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 22px;
+    color: #8B1538;
+}
+.titulo-whats p{
+ font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #35292C;
+    margin-top: 5px;
+}
+.form-Whats{
+ display: flex;
+    flex-direction: column;
+    gap: 15px;  
+}
+.campo-form{
+ display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.campo-form label{
+ font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #8B1538;
+    font-weight: 600;
+}
+.campo-form input{
+ width: 100%;
+    padding: 12px;
+    border: 1px solid #D9B7BE;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+.button-envio{
+   width: 100%;
+    background-color: #8B1538;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 25px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.button-envio:hover{
+ background-color: #5a0c1f;
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVIDADE PARA celular*/
+@media (Max-width:600px){ 
+header {
+    width: 100%;
+    padding: 10px;
+}
+
+#nave {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+#nave a {
+    padding-top: 0;
+}
+
+
+#nave > a:first-child {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+#logo-cabeçalho {
+    width: 85px;
+    margin-top: 0;
+}
+
+/* LINKS DO MENU */
+
+#nave > a.cabeçalho {
+    flex: 0 0 50%;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.3;
+    padding: 8px 4px;
+}
+
+
+
+
+.sobre-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    gap: 25px;
+}
+
+.sobre-imagem {
+    width: 100%;
+}
+
+.sobre-imagem img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.sobre-conteudo {
+    width: 100%;
+}
+
+.sobre-conteudo h2 {
+    font-size: 32px;
+}
+
+
+
+#Serviços .fotos-servi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    gap: 30px;
+}
+
+#Serviços .servico-item {
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+
+#Serviços .fotos-servi img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 0;
+}
+
+#Serviços #serv-1,
+
+#Serviços #serv-3 {
+    margin: 12px 0 0;
+    text-align: center;
+    font-size: 22px;
+}
+#Serviços #serv-2{
+margin: 12px 0 0;
+    text-align: center;
+    font-size: 22px;
+    width: 300px;
+}
+
+
+
+.divisor-bolo {
+    width: 100%;
+    height: auto;
+    min-height: 170px;
+    padding: 25px 15px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.divisor-bolo .linha {
+    display: none;
+}
+
+
+
+.divisor-bolo > div {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+#cursos {
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.divisor-bolo svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 8px auto;
+}
+
+
+
+#paragraf-curso {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    padding: 0 8px;
+}
+
+
+
+.section-conteudo-cursos {
+    margin-top: 0;
+}
+.card-curso {
+    margin-left: 0;
+    margin-right: -5px;
+}
+
+
+.retangulo-inscricao {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    padding: 25px 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    height: 200px;
-    width: 520px;
-    padding: 20px;
-    background-color: #FFF7F0;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
-    margin-left: 815px;
-    margin-top: -90px;
 }
-.whats-cont{
+
+
+
+#foto-sabrina {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+
+
+.content-serv {
+    width: 100%;
+    margin: 0;
+}
+
+.content-serv h2 {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.content-serv li {
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+.preco-curso {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 0;
+    border-left: none;
+    border-top: 1px solid #F3E7DF;
+}
+
+.preco-curso h2 {
+    font-size: 48px;
+}
+
+.botao-inscricao {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+}
+
+
+
+.container-contatos {
     display: flex;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    background-color:  #FFF7F0;
-    color: #8B1538;
-    text-decoration: none;
-    overflow-wrap: anywhere;
-    border-left: 1px solid #a3183b;
-    padding-left: 20px;
-   
+    align-items: center;
+  gap: 20px;
+    padding: 20px 15px;
+    gap: 25px;
 }
-.whats-cont p{
-    font-family: 'Poppins', sans-serif;
+.linha-contatos {
+    display: none;
+}
+#foto-contato {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+}
+.texto-contatos {
+    width: 100%;
+    text-align: center;
+}
+.texto-contatos h3 {
+    margin: 0 0 12px;
+    font-size: 30px;
+}
+
+.texto-contatos p {
     font-size: 14px;
-    line-height: 1.4;
-    color: #35292C;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+.cards-contatos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.cards-contatos .card-instagram {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    gap: 12px;
 }
 
 
 
+.texto-instagram {
+    width: 100%;
+    min-width: 0;
+}
 
-.whats-cont label{
-margin-right: 300px;
+.email-contato {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+.cont-whats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 15px;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.whats-cont {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#form-Whats {
+    width: 100%;
+}
+
+.campo-form input,
+.campo-form select,
+#mensagem {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.button-envio {
+    width: 100%;
+}
+footer {
+    width: 100%;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+#paragraf-footer {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+footer p {
+    overflow-wrap: anywhere;
+}
+
+footer a {
+    font-size: 12px;
+    line-height: 1.5;
+}
+}
+
+/* RESPONSIVIDADE PARA TABLETS */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+
+
+    .sobre-container {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        padding: 30px 25px;
+        width: 100%;
+    }
+
+    .sobre-imagem {
+        flex: 0 0 42%;
+        min-width: 0;
+    }
+
+    .sobre-imagem img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .sobre-conteudo {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 34px;
+    }
+
+    .sobre-conteudo p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+.fotos-servi {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 30px;
+    width: 100%;
+    margin: 25px auto 0;
+    padding: 0 20px;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 780px){
-.container{
-flex-direction: column;
+.servico-item {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
 }
-.imagem-body{
-display: none;
+
+
+
+#foto-um-serv,
+#foto-dois-serv,
+#foto-tres-serv {
+    width: 100% !important;
+    height: 260px !important;
+    object-fit: cover;
+    margin: 0 !important;
+}
+
+
+
+#serv-1,
+#serv-2,
+#serv-3 {
+    margin: 12px 0 0 !important;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+.servico-item:nth-child(3) {
+    grid-column: 1 / -1;
+}
+ .section-conteudo-cursos {
+        height: auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    .retangulo-inscricao {
+        height: auto !important;
+    }
+
+    .section-contatos {
+        position: static !important;
+        margin-top: 0 !important;
+        transform: none !important;
+        height: auto !important;
+    }
+
+    .layout-contatos {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        height: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .container-contatos {
+        width: 100%;
+        height: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .cards-contatos {
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .cont-whats {
+        position: static !important;
+        width: 100%;
+        margin: 20px 0 0 !important;
+        transform: none !important;
+    }
+
+    .whats-cont {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto !important;
+        transform: none !important;
+    }
+
+    .footer {
+        margin-top: 0 !important;
+    }
+ .novo-texto-contatos {
+        width: 100%;
+        margin: 0 !important;
+        transform: none !important;
+        text-align: center;
+    }
+
+    #h3-contatos {
+        font-size: 28px;
+        white-space: normal;
+    }
+
+    /* ORGANIZA OS CARDS VERTICALMENTE */
+
+    .cards-contatos {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    /* TAMANHO DOS CARDS */
+
+    .cards-contatos .card-instagram {
+        width: 100%;
+        max-width: 360px;
+        min-width: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* TEXTO DOS CARDS */
+
+    .texto-instagram {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* BOTÃO DO INSTAGRAM */
+
+    .botao-instagram {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 12px 20px;
+        text-align: center;
+        white-space: normal;
+    }
+
+  .layout-contatos {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 15px !important;
+        align-items: center;
+    }
+
+    .container-contatos {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        gap: 15px !important;
+        transform: none !important;
+    }
+
+    /* TEXTO VAMOS CONVERSAR */
+
+    .novo-texto-contatos {
+        width: 100%;
+        margin: 0 !important;
+        transform: none !important;
+        text-align: center;
+    }
+
+    #h3-contatos {
+        white-space: normal;
+    }
+
+    /* CARDS UM EMBAIXO DO OUTRO */
+
+    .cards-contatos {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 15px !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .cards-contatos .card-instagram {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        transform: none !important;
+    }
+
+    /* BOTÃO INSTAGRAM */
+
+    .cards-contatos .botao-instagram {
+        display: inline-block;
+        width: auto;
+        max-width: 100%;
+        padding: 10px 15px;
+        font-size: 12px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    /* FORMULÁRIO LOGO ABAIXO DOS CARDS */
+
+    .cont-whats {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .whats-cont {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        margin-top: 0 !important;
+        transform: none !important;
+    }
+
+
+    
+}
+
+
+/* INSCRIÇÃO DOS CURSOS NO TABLET */
+
+.retangulo-inscricao {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+/* FOTO DA SABRINA */
+
+#foto-sabrina {
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+/* BENEFÍCIOS DO CURSO */
+
+.content-serv {
+    width: 100%;
+    margin: 0;
+}
+
+.content-serv h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.content-serv li {
+    font-size: 13px;
+    margin-left: 0;
+}
+
+/* PREÇO E BOTÃO */
+
+.preco-curso {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 0;
+
+    border-left: none;
+    border-top: 1px solid #F3E7DF;
+}
+
+.preco-curso h2 {
+    font-size: 45px;
+}
+
+.botao-inscricao {
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+/* CONTATOS NO TABLET */
+
+.container-contatos {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 25px;
+}
+
+/* FOTO */
+
+#foto-contato {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 25px;
+}
+
+/* TEXTO */
+
+.texto-contatos {
+    width: 100%;
+    min-width: 0;
+}
+
+.texto-contatos h3 {
+    font-size: 32px;
+    margin: 0 0 15px;
+}
+
+.texto-contatos p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* REMOVE AS QUEBRAS MANUAIS DO TEXTO */
+
+.texto-contatos p br {
+    display: none;
+}
+
+/* ESCONDE A LINHA VERTICAL */
+
+.linha-contatos {
+    display: none;
+}
+
+/* CARDS DE CONTATO */
+
+.cards-contatos {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* TAMANHO DOS CARDS */
+
+.cards-contatos .card-instagram {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+}
+
+.email-contato {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+.whats-cont {
+    margin-left: 120px;
+    margin-top: 20px;
+}
+#form-Whats .button-envio {
+    margin-top: 20px;
+}
+ .layout-contatos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        margin: 0 auto;
+        padding: 20px;
+        transform: none;
+    }
+
+    .container-contatos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        gap: 20px;
+        transform: none;
+    }
+
+    .novo-texto-contatos {
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .cards-contatos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 12px;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .cont-whats {
+        position: static;
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto !important;
+        padding: 0;
+        transform: none !important;
+    }
+
+    .whats-cont {
+        width: 100%;
+        margin: 0 auto !important;
+        transform: none !important;
+    }
+
+    .footer {
+        position: static !important;
+        margin: 0 !important;
+        transform: none !important;
+        height: auto;
+    }
+
+}
+.novo-texto-contatos {
+    margin-top: -600px !important;
+    transform: none !important;
 }
 }

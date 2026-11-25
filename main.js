@@ -1,45 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
     lucide.createIcons();
 });
-const formulario = document.getElementById ("formulario")
 
+const formulario = document.getElementById("form-Whats");
 
-formulario.addEventListener("submit", function (event){
+formulario.addEventListener("submit", function(event) {
 
+    // Impede que a página recarregue
+    event.preventDefault();
 
-event.preventDefault()
+    // Captura os dados preenchidos
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const motivo = document.getElementById("motivo").value;
+    const mensagem = document.getElementById("mensagem").value.trim();
 
+    // Verifica o nome
+    if (nome === "") {
+        alert("Por favor, digite seu nome!");
+        return;
+    }
 
-//CAPTURAR OS VALORES DIGITADOS PELO USUARIO
+    // Monta a mensagem para o WhatsApp
+    const textoWhatsapp = `
+Olá! Gostaria de entrar em contato com a equipe da Sabrina Neublum Artes & Festas.
 
-const nome = document.getElementById("nome").value
-const email = document.getElementById("email").value
-const telefone = document.getElementById("telefone").value
-const cargo = document.getElementById("moitvocont").value
-const mensagem = document.getElementById("mensagem").value
+*Nome:* ${nome}
+*E-mail:* ${email || "Não informado"}
+*Telefone:* ${telefone || "Não informado"}
+*Motivo do contato:* ${motivo}
+*Observações:* ${mensagem || "Nenhuma"}
+`;
 
-if(telefone.trim() === ""){
-alert("Digite seu nome")
-return
-}
+    // Codifica os caracteres para a URL
+    const mensagemCodificada = encodeURIComponent(textoWhatsapp);
 
-const textoWhatsapp = 
-`
-Olá gostaria de me candidatar ao processo seletivo da Microsoft
-Nome: ${nome}
-Email: ${email}
-Telefone: ${telefone}
-Cargo: ${cargo}
-Observações: ${mensagem}
-`
+    // Coloque aqui o WhatsApp verdadeiro da Sabrina
+    const numeroWhatsapp = "5511996440067";
 
-//CONDIFICAR A MENSAGEM  SER ULTILIZADA NA URL
-const mensagemCodificada = encodeURIComponent (textoWhatsapp)
-//NUMERO DO WHATSAPP
-const numeroWhatsapp = "5511991609440"
-//MONTA O LINK WHATSAPP
-const link = "https://wa.me/" + numeroWhatsapp + "?text=" + mensagemCodificada
+    // Monta o link do WhatsApp
+    const link = "https://wa.me/" + numeroWhatsapp
+        + "?text=" + mensagemCodificada;
 
-window.location.href = link
+    // Redireciona para o WhatsApp
+    window.open(link, "_blank");
 
-})
+});

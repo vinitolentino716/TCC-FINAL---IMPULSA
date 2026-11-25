@@ -24,7 +24,7 @@
 
     <section class="imagem-body" id="pagini">
         <article class="fotos-fundos">
-            <img id="foto-pagini"  src="./imagem/Foto bonita bolo.jpeg">
+            <img id="foto-pagini"  src="./imagem/Foto bolo pagini definitivo.png">
         </article>
 
         <article class="texto-sobre">
@@ -94,15 +94,27 @@
     <section class="serv" id="Serviços" >
         <h2 class="h2-serv-um">Serviços aluguel de decorações</h2>
         <h2 id="h2-serviços-dois">Decorações Para Festas e Eventos<h2>
-                <div class="fotos-servi">
+            <div class="fotos-servi">
+
+            <div class="serviço-content">
                     <img id="foto-um-serv" src="./imagem/Foto 1 serviços oferecidos.png">
+                    <h2 id="serv-1">Bolos <br> Cenográficos</h2>
+            </div>
+
+            <div class="serviço-content">
                     <img id="foto-dois-serv" src="./imagem/Foto 2 serv.oferici.jpeg">
+                     <h2 id="serv-2">Decorações</h2>
+            </div>
+
+              <div class="serviço-content">
                     <img id="foto-tres-serv" src="./imagem/Foto sabrina pag inicial.jpeg">
+                     <h2 id="serv-3">Cursos</h2>
+ 
                 </div>
-                <h2 id="serv-1">Bolos Cenografico</h2>
-                <h2 id="serv-2">Decorações</h2>
-                <h2 id="serv-3">Cursos</h2>
-    </section>
+            </div>
+               
+               
+                  </section>
 
     <section>
         <div class="divisor-bolo" aria-hidden="true">
@@ -214,10 +226,10 @@ object-fit: cover; border-radius: 20px 20px 0 0; display: block;">
 
 
 
-
+               
                 <div class="decoracao-contatos" id="Contatos">
+                
                     <span class="linha-contato"></span>
-
                     <i data-lucide="mail"></i>
 
                     <span class="linha-contato"></span>
@@ -231,15 +243,13 @@ object-fit: cover; border-radius: 20px 20px 0 0; display: block;">
 
             <div class="container-contatos">
 
-                <img id="foto-contato" src="./imagem/Foto contatos.jpg">
+              
+                    <div class="novo-texto-contatos">
+                        <h3 id="h3-contatos">Vamos Conversar?</h3>
+                        <p>Escolha um dos canais e fale com a nossa equipe.</p>
+                    </div>
 
-                <div class="texto-contatos">
-                    <h3>Vamos <br>Conversar?</h3>
-                    <p>Escolha um dos canais ao lado<br> e fale diretamente com a nossa<br> equipe. Estamos prontos
-                        para<br> te atender</p>
-                </div>
-
-                <div class="linha-contatos"></div>
+                
                 <div class="cards-contatos">
 
                 <div class="card-instagram">
@@ -274,48 +284,62 @@ object-fit: cover; border-radius: 20px 20px 0 0; display: block;">
                     </a>
                 </div>
             </div>
+            </div>
     </section>
     
 
     <section class="cont-whats">
         <div class="whats-cont">
             <i data-lucide="phone"></i>
-            <h1>Telefone</h1>
-            <p id="paragraf-whats">Quer falar conosco? Aqui esta o nosso Whatszap</p>
-            <p i>+55 11 99644-0067</p>
-      <!--  <form>
+        <div class="titulo-whats">
+          <h2>Entre em Contato Conosco!</h2>
+          <p>Preencha os dados e fale com nossa equipe</p>
+          </div> 
+
+       <form id="form-Whats">
+
+        <div class="campo-form">
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" placeholder="Digite seu Nome" required>
-        <br>
+        </div>
+
+        <div class="campo-form">
         <label for="Email">Email:</label>
         <input type="email" id="email" placeholder="Digite seu Email">
-        <br>
+        </div>
+
+        <div class="campo-form">
         <label for="telefone">Telefone:</label>
         <input type="tel" id="telefone" placeholder="(11) 9999-9999">
-        <br>
+        </div>
+
+         <div class="campo-form">
         <label for="duvidas">Motivo do Contato:</label>
-        <select id="cargo">
+        <select id="motivo">
             <option value="Selecione">O que você quer nos consultar</option>
             <option value="Administrativo">Contratação</option>
             <option value="Progrador">Solicitar Orçamento</option>
             <option value="Designer">Acompanhar pedido/Cancelamento</option>
-            <option value="Analista">Duvidas</option>
+            <option value="Analista">Outras dúvidas</option>
+    
         </select>
-        <br>
+</div>
+
+        <div class="campo-form">
         <label for="mensagem">OBSERVAÇÕES:</label>
-        <br>
+        </div>
         <textarea id="mensagem" placeholder="Digite sua Mensagem"></textarea>
-        <br>
-        <button type="submit">Enviar Solicitação</button>
+    
+        <button type="submit" class="button-envio">Enviar Solicitação</button>
+  
         </form>
-        </main>
-        -->
-        </form>
+     
+      
         </div>
         </section>
 
 <footer class="footer">
-<p id="paragraf-footer">&copy;sabrinaneublum.com.br | Todos os direitos reservados</p>
+<p id="paragraf-footer">&copy;2026 Sabrina Neublum Artes & Festas | Todos os direitos reservados.</p>
 <p id="paragrafo-footer">Política de Privacidade | Termos de Uso</p>
 <p id="paragrafo-fot">SABRINA NEUBLUM ORLANDI – ME – CNPJ 41.114.382/0001-61</p>
 <p id="paragrafs-footer">Rua Professor Batista de Brito, 68 – Vila Pauliceia, São Paulo – SP, 02301-080</p>
@@ -324,7 +348,3 @@ object-fit: cover; border-radius: 20px 20px 0 0; display: block;">
 <script src="./main.js"></script>
 </body>
 </html>
-<!--
-*Renderizar site > 24/11
-*Fazer Java (Alert bem vindo e formulario para Whatszap > Entrar em contato, duvidas etc) > 24/11
---> 
