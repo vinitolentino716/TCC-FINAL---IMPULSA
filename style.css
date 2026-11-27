@@ -721,16 +721,17 @@ object-fit: cover;
     margin-bottom: 15px;
     margin-top: 600px;
    position: relative !important;
-    left: 270px !important;
+    left: -10px !important;
 }
 #h3-contatos{
 transform: translateY(-20px);
 }
 #paragrafo-cont{
-transform: translateY(220px);
- position: relative;
-    left: -80px;
-    white-space: nowrap;
+ position: static !important;
+        transform: none !important;
+        white-space: normal !important;
+        margin: 8px 0 !important;
+        text-align: center;
 }
 .texto-contatos p {
     font-family: 'Poppins', sans-serif;
@@ -850,7 +851,10 @@ color: white;
     gap: 40px;
 }
 #foto-telefone{
-transform: translateY(-20px);
+   width: 45px !important;
+    height: 45px !important;
+    position: relative;
+    top: -5px !important;
 }
 .whats-cont{
  width: 480px !important;
@@ -878,9 +882,12 @@ transform: translateY(-5px);
 transform: translateY(-5px);
 }
 .cont-whats{
- width: 100%;
+ width: 90% !important;
     margin: 105px 0 0 !important;
     padding: 0;
+     position: relative !important;
+    top: -320px !important;
+    left: -470px !important;
 }
 .cont-whats{
 transform: translateX(00px) !important;
@@ -896,7 +903,7 @@ transform: translateX(00px) !important;
     font-weight: 600;
     white-space: nowrap;
       position: relative;
-    top: 20px !important;
+    top: -10px !important;
 }
 .whats-cont {
     position: relative !important;
@@ -942,9 +949,13 @@ text-align: center;
     margin: 0 auto;
         height: 45px;
     position: relative;
-    top: -10px;
+      height: auto !important;
 }
-
+.titulo-whats h2,
+.titulo-whats p {
+    position: relative;
+    top: -15px !important;
+}
 
 .titulo-whats h3{
  font-family: 'Bricolage Grotesque', sans-serif;
@@ -1005,25 +1016,76 @@ text-align: center;
 
 /* RESPONSIVIDADE PARA celular*/
 @media (Max-width:600px){ 
-header {
-    width: 100%;
-    padding: 10px;
-}
+ header {
+           width: 100% !important;
+        left: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
 
+    #nave {
+     display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        transform: none !important;
+    }
+   #nave > a:first-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        position: static !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+#nave a[href="#Sobrenos"],
+#nave a[href="#Cursos"] {
+    position: relative !important;
+    left: -270px !important;
+      position: relative;
+    top: 40px;
+}
+#nave a[href="#Cursos"] {
+ position: relative !important;
+    top: 32px !important;
+}
+#nave a[href="#Sobrenos"] {
+    position: relative !important;
+    top: 70px !important;
+}
 #nave {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    top: 0 !important;
+    row-gap: 2px !important;
+}
+ #logo-cabeçalho {
+        width: 85px;
+        margin: 0 auto !important;
+ }
+  #nave > a.cabeçalho {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        position: static !important;
+         position: relative !important;
+    left: 30px !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 6px 2px !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 11px;
+        box-sizing: border-box;
+    }
+header {
+    padding: 5px 10px !important;
 }
 
-
-
-#nave a {
-    padding-top: 0;
+/* IMPEDIR QUE O HEADER CUBRA A IMAGEM */
+#pagini {
+    margin-top: 110px !important;
 }
-
 
 #nave > a:first-child {
     flex: 0 0 100%;
@@ -1183,26 +1245,30 @@ margin: 12px 0 0;
 
 
 .retangulo-inscricao {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    padding: 25px 20px;
-
-    display: flex;
-    flex-direction: column;
+       display: flex !important;
+    flex-direction: column !important;
     align-items: center;
+    width: 100%;
+    height: auto !important;
     gap: 20px;
+    padding: 25px 15px;
 }
 
-
-
 #foto-sabrina {
-    margin: 0 !important; 
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
 }
 .content-serv {
     width: 100% !important;
     margin: 0 !important;
-    padding: 10px;
+    padding: 0 10px;
+    position: static !important;
+    transform: none !important;
     box-sizing: border-box;
 }
 .content-serv {
@@ -1216,15 +1282,13 @@ margin: 12px 0 0;
 .content-serv li {
     margin-left: 10px !important;
 }
-
-
-
 .preco-curso {
-    width: 100%;
-    margin: 0;
-    padding: 20px 0 0;
+  width: 100%;
+    margin: 0 !important;
+    transform: none !important;
     border-left: none;
     border-top: 1px solid #F3E7DF;
+    padding-top: 20px;
 }
 .preco-curso {
     transform: translateX(-30px);
@@ -1238,16 +1302,13 @@ margin: 12px 0 0;
     text-align: center;
     white-space: normal;
 }
-
-
-
 .container-contatos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  gap: 20px;
-    padding: 20px 15px;
-    gap: 25px;
+  display: flex !important;
+        flex-direction: column !important;
+        width: 100%;
+        padding: 20px 12px;
+        gap: 15px;
+        transform: none !important;
 }
 .linha-contatos {
     display: none;
@@ -1276,18 +1337,18 @@ margin: 12px 0 0;
     margin: 0 auto;
 }
 .cards-contatos {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
+   display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100% !important;
+        gap: 10px;
+        margin: 0 !important;
+        position: static !important;
+        transform: none !important;
 }
 .cards-contatos .card-instagram {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    padding: 20px 15px;
-    box-sizing: border-box;
-    gap: 12px;
+    width: 100% !important;
+        min-width: 0;
+        padding: 15px 8px;
 }
 
 
@@ -1319,7 +1380,11 @@ margin: 12px 0 0;
     padding: 20px;
     box-sizing: border-box;
 }
-
+.whats-cont .botao-whats {
+    position: relative;
+    top: 0 !important;
+    margin-top: 10px !important;
+}
 #form-Whats {
     width: 100%;
 }
@@ -1356,10 +1421,9 @@ footer a {
     line-height: 1.5;
 }
 .botao-instagram {
-    width: auto !important;
-    font-size: 10px;
-    padding: 8px 10px;
-    white-space: nowrap;
+    max-width: 100%;
+        white-space: normal !important;
+        text-align: center;
 }
 }
 
@@ -1495,16 +1559,23 @@ footer a {
     transform: translateY(2px) !important;
 }
     .cont-whats {
+        display: flex !important;
+        justify-content: center;
         position: static !important;
-        width: 100%;
-        margin: 20px 0 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 15px 12px 25px;
         transform: none !important;
+        background-color: #F5E8DC;
     }
 
     .whats-cont {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
         transform: none !important;
     }
 
@@ -1513,9 +1584,9 @@ footer a {
     }
 .novo-texto-contatos {
         position: static !important;
+        transform: none !important;
         width: 100%;
         margin: 0 0 15px !important;
-        transform: none !important;
         text-align: center;
     }
 .novo-texto-contatos p{
@@ -1524,12 +1595,10 @@ margin-left: 200px;
 }
 
     #h3-contatos {
-        font-size: 28px;
-        white-space: normal;
-         position: relative !important;
-    left: -00px !important;
+       font-size: 27px;
+        white-space: normal !important;
     }
-    #
+
 
     /* ORGANIZA OS CARDS VERTICALMENTE */
 
@@ -1609,7 +1678,7 @@ margin-left: 200px;
 
     .titulo-whats {
         height: auto !important;
-        top: 0 !important;
+        top: auto !important;
     }
 
     .whats-cont a,
@@ -1618,7 +1687,10 @@ margin-left: 200px;
         margin-top: 15px !important;
     }
 .botao-whats{
-margin-top: 80px;
+  display: inline-block;
+        position: static !important;
+        transform: none !important;
+        margin-top: 15px !important;
 }
 
     /* FOOTER */
