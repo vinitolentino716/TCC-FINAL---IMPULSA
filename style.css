@@ -1357,7 +1357,14 @@ margin: 12px 0 0;
     width: 100%;
     min-width: 0;
 }
-
+#h3-instagram{
+ position: relative;
+    left: -10px;
+}
+#paragraf-insta{
+position: relative;
+    left: -10px;
+}
 .email-contato {
     font-size: 12px;
     overflow-wrap: anywhere;
